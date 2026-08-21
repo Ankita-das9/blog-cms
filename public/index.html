@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 My Blog</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="login.html">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="Search posts...">
+    <button class="btn btn-outline" id="searchBtn">Search</button>
+    <button class="btn btn-outline" id="clearBtn" style="display:none;">Clear</button>
+  </div>
+
+  <div class="filter-pills" id="categoryPills"></div>
+
+  <div id="postsContainer"></div>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<footer>Built with HTML, CSS, JavaScript, Express &amp; MongoDB</footer>
+
+<script src="js/api.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | My Blog Admin</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 My Blog</a>
+    <div class="nav-links">
+      <a href="index.html">View Site</a>
+      <a href="editor.html">+ New Post</a>
+      <span id="roleBadgeWrap"></span>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Dashboard <span id="welcomeName" style="font-weight:400; font-size:1rem; color:#6b7070;"></span></h2>
+
+  <div class="nav-links" style="margin-bottom:20px;">
+    <a href="#" id="tabPosts" class="active">Posts</a>
+    <a href="#" id="tabComments">Comments</a>
+    <a href="#" id="tabUsers" style="display:none;">Users</a>
+  </div>
+
+  <div id="postsTab">
+    <div id="postsTableWrap"><p class="empty-state">Loading posts...</p></div>
+  </div>
+
+  <div id="commentsTab" style="display:none;">
+    <div id="commentsTableWrap"><p class="empty-state">Loading comments...</p></div>
+  </div>
+
+  <div id="usersTab" style="display:none;">
+    <h3>Add a new Editor or Writer</h3>
+    <div class="field">
+      <label for="newUsername">Username</label>
+      <input type="text" id="newUsername" placeholder="e.g. john_editor">
+    </div>
+    <div class="field">
+      <label for="newDisplayName">Display Name (optional)</label>
+      <input type="text" id="newDisplayName" placeholder="e.g. John Doe">
+    </div>
+    <div class="field">
+      <label for="newPassword">Password</label>
+      <input type="password" id="newPassword" placeholder="Temporary password">
+    </div>
+    <div class="field">
+      <label for="newRole">Role</label>
+      <select id="newRole">
+        <option value="writer">Writer — can only create/edit own posts, needs approval to publish</option>
+        <option value="editor">Editor — can manage and publish any post, moderate comments</option>
+        <option value="admin">Admin — full access, can manage users</option>
+      </select>
+    </div>
+    <button class="btn" id="createUserBtn">Create User</button>
+    <p class="error-msg" id="userMsg"></p>
+
+    <h3 style="margin-top:32px;">All Users</h3>
+    <div id="usersTableWrap"><p class="empty-state">Loading users...</p></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor | My Blog Admin</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 My Blog</a>
+    <div class="nav-links">
+      <a href="admin.html">Dashboard</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 id="pageTitle">New Post</h2>
+
+  <div class="field">
+    <label for="title">Title</label>
+    <input type="text" id="title" placeholder="Enter post title">
+  </div>
+
+  <div class="field">
+    <label for="category">Category</label>
+    <input type="text" id="category" placeholder="e.g. Technology, Personal, Travel">
+  </div>
+
+  <div class="field">
+    <label for="tags">Tags (comma-separated)</label>
+    <input type="text" id="tags" placeholder="e.g. javascript, mongodb, webdev">
+  </div>
+
+  <div class="field">
+    <label for="coverImageInput">Cover Image</label>
+    <input type="file" id="coverImageInput" accept="image/*">
+    <img id="coverPreview" style="max-width:220px; margin-top:10px; border-radius:8px; display:none;">
+  </div>
+
+  <div class="field">
+    <label for="excerpt">Excerpt (optional, auto-generated if left blank)</label>
+    <textarea id="excerpt" rows="2" placeholder="Short summary shown on the home feed"></textarea>
+  </div>
+
+  <div class="field">
+    <label>Content</label>
+    <div id="quillEditor"></div>
+  </div>
+
+  <div class="field">
+    <label for="statusSelect">Status</label>
+    <select id="statusSelect"></select>
+    <p id="roleNote" style="font-size:0.82rem; color:#6b7070; margin-top:6px;"></p>
+  </div>
+
+  <div class="row-actions" style="margin-top:20px;">
+    <button class="btn" id="saveBtn">Save Post</button>
+    <a class="btn btn-outline" href="admin.html">Cancel</a>
+  </div>
+  <p class="error-msg" id="editorMsg"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>

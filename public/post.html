@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post | My Blog</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">📝 My Blog</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div id="postDetail"><p class="empty-state">Loading...</p></div>
+
+  <div id="commentsSection" style="display:none;">
+    <h3>Comments</h3>
+    <div id="commentsList"></div>
+
+    <div class="field" style="margin-top:24px;">
+      <label for="commentName">Name</label>
+      <input type="text" id="commentName" placeholder="Your name">
+    </div>
+    <div class="field">
+      <label for="commentEmail">Email (optional, not shown publicly)</label>
+      <input type="email" id="commentEmail" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label for="commentText">Comment</label>
+      <textarea id="commentText" rows="4" placeholder="Write a comment..."></textarea>
+    </div>
+    <button class="btn" id="submitCommentBtn">Post Comment</button>
+    <p class="error-msg" id="commentMsg"></p>
+  </div>
+</div>
+
+<footer>Built with HTML, CSS, JavaScript, Express &amp; MongoDB</footer>
+
+<script src="js/api.js"></script>
+<script src="js/post.js"></script>
+</body>
+</html>
