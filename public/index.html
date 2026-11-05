@@ -1,39 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Blog</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog | Stories & Ideas</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="navbar">
   <div class="container">
-    <a href="index.html" class="brand">📝 My Blog</a>
+    <a href="index.html" class="brand">The Journal.</a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="login.html">Admin</a>
+      <a href="login.html">Login</a>
     </div>
   </div>
 </nav>
 
-<div class="container">
-  <div class="toolbar">
-    <input type="text" id="searchInput" placeholder="Search posts...">
-    <button class="btn btn-outline" id="searchBtn">Search</button>
-    <button class="btn btn-outline" id="clearBtn" style="display:none;">Clear</button>
+<header class="hero-section">
+  <div class="container">
+    <p class="hero-label">WELCOME TO THE JOURNAL</p>
+    <h1>Stories worth<br><span>spending time with.</span></h1>
+    <p class="hero-description">
+      A space for thoughtful ideas, fresh perspectives,
+      creativity and stories that inspire.
+    </p>
+    <a href="#latest-posts" class="btn">Explore Stories</a>
   </div>
+</header>
 
-  <div class="filter-pills" id="categoryPills"></div>
+<main class="container" id="latest-posts">
 
-  <div id="postsContainer"></div>
-  <div class="pagination" id="pagination"></div>
-</div>
+  <section class="editorial-heading">
+    <div>
+      <p class="section-label">THE COLLECTION</p>
+      <h2>Explore the Journal</h2>
+    </div>
+    <p>Discover something new with every story.</p>
+  </section>
 
-<footer>Built with HTML, CSS, JavaScript, Express &amp; MongoDB</footer>
+  <section class="blog-explorer">
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Search for stories...">
+      <button class="btn btn-outline" id="searchBtn">Search</button>
+      <button class="btn btn-outline" id="clearBtn" style="display:none;">Clear</button>
+    </div>
+
+    <div class="filter-pills" id="categoryPills"></div>
+
+    <div id="postsContainer"></div>
+    <div class="pagination" id="pagination"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <h3>The Journal.</h3>
+    <p>Thoughts, stories and perspectives worth sharing.</p>
+    <p>Built with HTML, CSS, JavaScript, Express &amp; MongoDB</p>
+  </div>
+</footer>
 
 <script src="js/api.js"></script>
 <script src="js/home.js"></script>
+
 </body>
 </html>
